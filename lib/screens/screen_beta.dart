@@ -7,7 +7,7 @@ class ScreenBeta extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('スクリーンベータ'),
+          title: const Text('値段設定'),
         ),
         body: const Center(
           child: Text(
