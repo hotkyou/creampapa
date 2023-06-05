@@ -11,7 +11,7 @@ class SettingScreen extends StatelessWidget {
         ),
         body: const Center(
           child: Text(
-            'ホーム',
+            'setting',
             style: TextStyle(fontSize: 32.0),
           ),
         ));

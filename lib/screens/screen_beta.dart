@@ -11,7 +11,7 @@ class ScreenBeta extends StatelessWidget {
         ),
         body: const Center(
           child: Text(
-            'ホーム',
+            'screen_beta',
             style: TextStyle(fontSize: 32.0),
           ),
         ));
