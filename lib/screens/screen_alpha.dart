@@ -7,7 +7,7 @@ class ScreenAlpha extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('ホーム'),
+          title: const Text('スクリーンアルファ'),
         ),
         body: const Center(
           child: Text(
