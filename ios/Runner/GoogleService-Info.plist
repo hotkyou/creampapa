@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>682385289884-4kntmivvo7qa92jmn3jjipqg636drq8k.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.682385289884-4kntmivvo7qa92jmn3jjipqg636drq8k</string>
+	<key>API_KEY</key>
+	<string>AIzaSyABsOg4SabEi8YbYLoerATWDJuRgc02kxQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>682385289884</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.creampapa</string>
+	<key>PROJECT_ID</key>
+	<string>creampapa-f2e16</string>
+	<key>STORAGE_BUCKET</key>
+	<string>creampapa-f2e16.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:682385289884:ios:c967c4cea4a0035cb37359</string>
+</dict>
+</plist>

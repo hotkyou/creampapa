@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "682385289884",
+    "project_id": "creampapa-f2e16",
+    "storage_bucket": "creampapa-f2e16.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:682385289884:android:4025f1fd4da0a7a9b37359",
+        "android_client_info": {
+          "package_name": "com.example.creampapa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "682385289884-1qghc6e95k043u5lng6d16t2be363h2k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8mrTPw1a03T6mDK4fiIX-JYqesM5k7TE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "682385289884-1qghc6e95k043u5lng6d16t2be363h2k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
