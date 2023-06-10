@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:creampapa/screens/edit_product.dart';
 import 'package:flutter/material.dart';
 import '../material/model.dart';
 import 'package:provider/provider.dart';
@@ -5,10 +7,10 @@ import 'package:provider/provider.dart';
 class ScreenBeta extends StatefulWidget {
   const ScreenBeta({Key? key}) : super(key: key);
   @override
-  _PriceSettings createState() => _PriceSettings();
+  PriceSettings createState() => PriceSettings();
 }
 
-class _PriceSettings extends State<ScreenBeta> {
+class PriceSettings extends State<ScreenBeta> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -30,41 +32,32 @@ class _PriceSettings extends State<ScreenBeta> {
                           },
                           background: Container(
                             color: Colors.red,
+                            child: const Icon(
+                              Icons.delete,
+                              color: Colors.white,
+                            ),
                           ),
                           child: Card(
                             child: ListTile(
                               title: Text(products[index].title),
                               subtitle: Text(
                                   "価格:${products[index].price}円 使用生地:${products[index].materialname}"),
+                              // onTap: ,
                             ),
                           ),
                         );
                       });
                 },
               ),
-            ))
-
-        // ListView.builder(
-        //   itemCount: _list.length,
-        //   itemBuilder: (context, index) {
-        //     return Dismissible(
-        //       key: UniqueKey(),
-        //       onDismissed: (direction) {
-        //         setState(() {
-        //           _list.removeAt(index);
-        //         });
-        //       },
-        //       background: Container(
-        //         color: Colors.red,
-        //       ),
-        //       child: Card(
-        //         child: ListTile(
-        //           title: Text(_list[index]),
-        //         ),
-        //       ),
-        //     );
-        //   },
-        // ),
-        );
+              floatingActionButton: FloatingActionButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const EditProduct()));
+                },
+                child: const Icon(Icons.add),
+              ),
+            )));
   }
 }
