@@ -8,6 +8,12 @@ class ScreenAlpha extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: const Text('生地計算'),
+          actions: <Widget>[
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.more_vert),
+            ),
+          ],
         ),
         body: const Center(
           child: Text(
