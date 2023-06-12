@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:creampapa/screens/home.dart';
-import 'package:creampapa/screens/screen_alpha.dart';
-import 'package:creampapa/screens/screen_beta.dart';
+import 'package:creampapa/screens/material_cal.dart';
+import 'package:creampapa/screens/product_settings.dart';
 import 'package:creampapa/screens/setting.dart';
 
 class MyApp extends StatelessWidget {
