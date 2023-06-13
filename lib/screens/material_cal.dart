@@ -1,3 +1,4 @@
+import 'package:creampapa/screens/edit_material.dart';
 import 'package:flutter/material.dart';
 
 class ScreenAlpha extends StatelessWidget {
@@ -10,7 +11,12 @@ class ScreenAlpha extends StatelessWidget {
           title: const Text('生地計算'),
           actions: <Widget>[
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const EditMaterial()));
+              },
               icon: const Icon(Icons.more_vert),
             ),
           ],
