@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:creampapa/screens/home.dart';
-import 'package:creampapa/screens/material_cal.dart';
-import 'package:creampapa/screens/product_settings.dart';
+import 'package:creampapa/screens/register.dart';
+import 'package:creampapa/screens/material_list.dart';
 import 'package:creampapa/screens/setting.dart';
 
 class MyApp extends StatelessWidget {
@@ -31,7 +31,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static const _screens = [
     HomeScreen(), //お知らせ
     ScreenBeta(), //生地計算
-    ScreenAlpha(), //精算処理
+    CloseRegister(), //精算処理
     SettingScreen(), //設定
   ];
 
