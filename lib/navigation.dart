@@ -29,10 +29,10 @@ class MyStatefulWidget extends StatefulWidget {
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static const _screens = [
-    HomeScreen(),
-    ScreenAlpha(),
-    ScreenBeta(),
-    SettingScreen(),
+    HomeScreen(), //お知らせ
+    ScreenBeta(), //生地計算
+    ScreenAlpha(), //精算処理
+    SettingScreen(), //設定
   ];
 
   int _selectedIndex = 0;
@@ -51,11 +51,13 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           currentIndex: _selectedIndex,
           onTap: _onItemTapped,
           items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'ホーム'),
-            BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'お気に入り'),
             BottomNavigationBarItem(
                 icon: Icon(Icons.notifications), label: 'お知らせ'),
-            BottomNavigationBarItem(icon: Icon(Icons.settings), label: '設定'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.query_stats), label: '生地計算'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.point_of_sale), label: '精算処理'),
+            BottomNavigationBarItem(icon: Icon(Icons.tune), label: '設定'),
           ],
           type: BottomNavigationBarType.fixed,
         ));
