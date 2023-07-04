@@ -18,7 +18,7 @@ This application solves the tedious tasks of reporting, dough calculation, and c
 - [x] Database Connection DB接続
 - [ ] News ニュース
 - [ ] Dough Calculation 生地計算
-- [ ] 精算処理
+- [x] 精算処理
 - [ ] Advanced Settings 詳細設定
 - [ ] Save Settings 設定保存 （shared_preferences）
 - [ ] notification 通知
