@@ -1,5 +1,6 @@
 #hotkyou
 /lib/firebase/
+**/ios/Runner/GoogleService-Info.plist
 
 # Miscellaneous
 *.class

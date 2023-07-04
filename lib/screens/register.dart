@@ -26,44 +26,85 @@ class Register extends State<CloseRegister> {
               for (int i = 0; i < money.length; i++)
                 TableRow(children: [
                   Container(
+                      padding: const EdgeInsets.all(10.0),
                       height: 50,
                       alignment: Alignment.center,
                       child: Text(
                         money[i].toString(),
                         style: const TextStyle(fontSize: 20),
                       )),
-                  TextButton(
-                    onPressed: () {
-                      showPicker(context, i);
-                    },
-                    child: moneySelect(i),
-                  ),
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        IconButton(
+                            onPressed: () {
+                              moneysheets[i] =
+                                  (int.parse(moneysheets[i]) - 1).toString();
+                              setState(() {
+                                moneysheets[i] = moneysheets[i];
+                              });
+                            },
+                            icon: const Icon(Icons.remove)),
+                        TextButton(
+                          onPressed: () {
+                            showPicker(context, i);
+                          },
+                          child: moneySelect(i),
+                        ),
+                        IconButton(
+                            onPressed: () {
+                              moneysheets[i] =
+                                  (int.parse(moneysheets[i]) + 1).toString();
+                              setState(() {
+                                moneysheets[i] = moneysheets[i];
+                              });
+                            },
+                            icon: const Icon(Icons.add)),
+                      ]),
                 ]),
             ],
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Table(children: [
-            TableRow(children: [
-              Container(
-                  height: 50,
-                  alignment: Alignment.center,
-                  child: const Text(
-                    '合計',
-                    style: TextStyle(fontSize: 20),
-                  )),
-              Container(
-                  height: 50,
-                  alignment: Alignment.center,
-                  child: Text(
-                    sumMoney().toString(),
-                    style: const TextStyle(fontSize: 20),
-                  )),
+        Column(
+          children: <Widget>[
+            Table(children: [
+              TableRow(children: [
+                Container(
+                    height: 50,
+                    alignment: Alignment.center,
+                    child: const Text(
+                      '合計',
+                      style: TextStyle(fontSize: 20),
+                    )),
+                Container(
+                    height: 50,
+                    alignment: Alignment.center,
+                    child: Text(
+                      sumMoney().toString(),
+                      style: const TextStyle(fontSize: 20),
+                    )),
+              ]),
             ]),
-          ]),
+            Table(children: [
+              TableRow(children: [
+                Container(
+                    height: 50,
+                    alignment: Alignment.center,
+                    child: const Text(
+                      '残り',
+                      style: TextStyle(fontSize: 20),
+                    )),
+                Container(
+                    height: 50,
+                    alignment: Alignment.center,
+                    child: Text(
+                      (sumMoney() - 100000).toString(),
+                      style: const TextStyle(fontSize: 20),
+                    )),
+              ]),
+            ]),
+          ],
         ),
-        TextButton(onPressed: WithdrawalMoney(), child: const Text('精算')),
       ]),
     );
   }
@@ -100,24 +141,5 @@ class Register extends State<CloseRegister> {
       sum += int.parse(moneysheets[i]) * money[i];
     }
     return sum;
-  }
-
-  //綺麗に合計100000円にする
-  WithdrawalMoney() {
-    int registersum = sumMoney(); //レジの合計
-    int setmoney = 100000; //設定金額
-    int eod = 0; //過不足
-    int withdrawal = registersum - setmoney + eod; //出金額
-    List<String> withdrawalCount = moneysheets; //出金枚数
-    while (withdrawal != 0) {
-      for (int i = 0; i < money.length; i++) {
-        if (withdrawal >= money[i]) {
-          withdrawal -= money[i];
-          withdrawalCount[i] = (int.parse(withdrawalCount[i]) + 1).toString();
-          break;
-        }
-      }
-    }
-    print(withdrawalCount);
   }
 }
