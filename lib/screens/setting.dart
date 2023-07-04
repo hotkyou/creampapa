@@ -1,19 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:settings_ui/settings_ui.dart';
 
-class SettingScreen extends StatelessWidget {
+class SettingScreen extends HookConsumerWidget {
   const SettingScreen({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: const Text('詳細設定'),
+  Widget build(BuildContext context, WidgetRef ref) {
+    return SettingsList(
+      sections: [
+        SettingsSection(
+          title: const Text('セクション'),
+          tiles: <SettingsTile>[
+            SettingsTile.navigation(
+              leading: const Icon(Icons.language),
+              title: const Text('Language'),
+              value: const Text('日本語'),
+              description: const Text('言語を選択'),
+            ),
+          ],
         ),
-        body: const Center(
-          child: Text(
-            'setting',
-            style: TextStyle(fontSize: 32.0),
-          ),
-        ));
+      ],
+    );
   }
 }
