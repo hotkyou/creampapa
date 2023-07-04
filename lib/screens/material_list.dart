@@ -29,6 +29,10 @@ class PriceSettings extends State<ScreenBeta> {
           ],
         ),
         body: MaterialApp(
+            theme: ThemeData(
+              primarySwatch: Colors.blue,
+            ),
+            darkTheme: ThemeData.dark(),
             home: ChangeNotifierProvider<MainModel>(
                 create: (_) => MainModel()..fetchProducts(),
                 child: Scaffold(
