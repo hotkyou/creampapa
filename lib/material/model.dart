@@ -26,9 +26,11 @@ class Products {
     title = doc['name'];
     materialname = doc['material-name'];
     price = doc['price'];
+    documentid = doc.id;
   }
   // Bookで扱うフィールドを定義しておく。
   String title = "";
   String materialname = "";
   int price = 0;
+  String documentid = "";
 }

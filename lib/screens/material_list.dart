@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:creampapa/screens/product_edit.dart';
 import 'package:flutter/material.dart';
 import '../material/model.dart';
@@ -46,6 +47,10 @@ class PriceSettings extends State<ScreenBeta> {
                               key: UniqueKey(),
                               onDismissed: (direction) {
                                 setState(() {
+                                  FirebaseFirestore.instance
+                                      .collection('product')
+                                      .doc(products[index].documentid)
+                                      .delete();
                                   products.removeAt(index);
                                 });
                               },
