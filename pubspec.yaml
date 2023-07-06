@@ -42,6 +42,8 @@ dependencies:
   flutter_picker: ^2.1.0
   settings_ui: ^2.0.2
   hooks_riverpod: ^2.3.6
+  package_info_plus: ^3.0.2
+  flutter_hooks: ^0.18.6
 
 dev_dependencies:
   flutter_test:
